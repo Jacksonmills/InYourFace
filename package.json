@@ -36,6 +36,7 @@
   },
   "activationEvents": [
     "onCommand:in-your-face.openview.focus",
+    "onCommand:in-your-face.jumpToNextError",
     "onView:in-your-face.openview"
   ],
   "main": "./out/extension.js",
@@ -70,6 +71,10 @@
       "category": "In Your Face",
       "title": "Open Sidebar",
       "icon": "$(clear-all)"
+    }, {
+      "command": "in-your-face.jumpToNextError",
+      "category": "In Your Face",
+      "title": "Jump to Next Error"
     }]
   },
   "scripts": {

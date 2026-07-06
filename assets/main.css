@@ -1,5 +1,8 @@
 body, html {
   background-color: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 section {
@@ -12,18 +15,53 @@ section {
   place-items: center;
 }
 
+/* Face container — clickable */
+#face-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, filter 0.15s ease;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+#face-container:hover {
+  transform: scale(1.06);
+  filter: brightness(1.15);
+}
+
+#face-container:active {
+  transform: scale(0.95);
+  filter: brightness(0.9);
+}
+
 section img {
   object-fit: contain;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 h2 {
   color: lightgrey;
   font-weight: 900;
+  text-align: center;
+  margin: 0;
+  padding: 4px 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: color 0.3s ease;
 }
 
 h2.alarm {
   color: rgb(176, 7, 41);
 }
+
 h2.yellow {
   color: rgb(176, 173, 7);
 }
