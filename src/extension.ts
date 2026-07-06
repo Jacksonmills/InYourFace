@@ -150,6 +150,7 @@ class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 
     // Generate URIs for all face images
     // 5 health states × 3 angles (left, center, right) = 15 face images
+    // TODO: opus did a bad job cutting up the doomguy sprite sheet, so we will cut them up ourselves so that existing image names work as is but we can add new ones later if we want to do a more accurate sprite sheet cut
     const faceUris: Record<string, string> = {};
     const angles = ["left", "center", "right"];
     for (let state = 0; state < 5; state++) {
